@@ -1,0 +1,79 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="{% static 'test.css' %}">
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="menu_div">
+            <h1>MENU</h1>
+        </div>
+
+        <div class="global_menu">
+            <a href="{% url 'sandwiches' %}"><div class="{% block sandvich_green %}{% endblock %}">
+                <div class="circle">
+                    <img src="{% static 'icons/Sandwiches.png' %}" alt="Sandwiches" class="circle_icon">
+                </div>
+                <h2>Sandwiches</h2>
+            </a>
+            </div>
+            <a href="{% url 'salads' %}"><div class="{% block salad_green %}{% endblock %}">
+                <div class="circle">
+                    <img src="{% static 'icons/Salads.png' %}" alt="Sandwiches" class="circle_icon">
+                </div>
+                <h2>Salads</h2>
+            </a>
+            </div>
+            <a href="{% url 'snacks' %}"><div class="{% block snack_green %}{% endblock %}">
+                <div class="circle">
+                    <img src="{% static 'icons/Snacks.png' %}" alt="Sandwiches" class="circle_icon">
+                </div>
+                <h2>Snacks</h2>
+            </a>
+            </div>
+            <a href="{% url 'drinks' %}"><div class="{% block drink_green %}{% endblock %}">
+                <div class="circle">
+                    <img src="{% static 'icons/Drinks.png' %}" alt="Sandwiches" class="circle_icon">
+                </div>
+                <h2>Drinks</h2>
+            </a>
+            </div>
+            <a href="{% url 'sweets' %}"><div class="{% block sweet_green %}{% endblock %}">
+                <div class="circle">
+                    <img src="{% static 'icons/Sweets.png' %}" alt="Sandwiches" class="circle_icon">
+                </div>
+                <h2>Sweets</h2>
+            </a>
+            </div>
+        </div>
+
+        <div class="menu_name">{% block catalog_name %}{% endblock %}</div>
+
+
+{% block content %}{% endblock %}
+
+
+
+        <div class="page-top">
+            <div class="total">Total: 2000֏</div>
+                <a href="#"><div class="basket"></a>
+                <center><img src="{% static 'icons/basket.png' %}" alt="basket" style="margin-top: 11px;"></center>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

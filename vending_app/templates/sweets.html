@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block sandvich_green %}oval_white{% endblock %}
+{% block salad_green %}oval_white{% endblock %}
+{% block snack_green %}oval_white{% endblock %}
+{% block drink_green %}oval_white{% endblock %}
+{% block sweet_green %}oval_green{% endblock %}
+
+
+{% block content %}
+
+<div class="menu">
+    {% for post in pr %}
+    {% if post.category == "sweet" %}
+    <div class="block">
+        <div class="circle_2">
+            <img src="{% static post.img_link %}" alt="Sandwiches" class="sandviches_icon">
+        </div>
+        <div class="block-text">{{ post.name }}</div>
+        <div class="price">{{ post.price }}</div>
+        <a href="#">
+            <div class="plus_circle">
+                <div class="plus">+</div>
+            </div>
+        </a>
+    </div>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endblock %}

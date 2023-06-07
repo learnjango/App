@@ -1,0 +1,255 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.main {
+    width: 1020px;
+    height: 1266px;
+    margin: 0;
+    padding: 0;
+}
+
+.global_menu {
+    display: flex;
+    margin-top: 49px;
+}
+
+.oval_green {
+    background: #9AD080;
+    width: 171px;
+    height: 268px;
+    box-shadow: 0px 0px 4.91px rgba(0, 0, 0, 0.1), 0px 2.45px 2.45px rgba(0, 0, 0, 0.2);
+    border-radius: 80px;
+    margin-left: 24px;
+    text-align: center;
+    color: white;
+    margin-top: 170px;
+    text-decoration: none;
+}
+
+.oval_green:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.oval_white:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.circle {
+    background: #ECECEC;
+    width: 145px;
+    height: 145px;
+    border-radius: 50%;
+    margin-left: 12px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+.circle img {
+    max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+
+.h2 {
+    color: white;
+}
+
+.oval_white {
+    background: #FFFFFF;
+    width: 171px;
+    height: 268px;
+    box-shadow: 0px 0px 4.91px rgba(0, 0, 0, 0.1), 0px 2.45px 2.45px rgba(0, 0, 0, 0.2);
+    border-radius: 80px;
+    margin-left: 30px;
+    text-align: center;
+    color: #000000;
+    margin-top: 170px;
+    text-decoration: none;
+}
+
+.menu_div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1020px;
+    height: 198px;
+    background: linear-gradient(180deg, #559B49 0%, #BAE899 116.67%);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+    margin: 0 auto;
+
+}
+
+.menu_name {
+    font-family: 'Reem Kufi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 152.3%;
+
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.01em;
+    margin-top: 30px;
+    margin-left: 24px;
+    color: #000000;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    justify-content: space-between;
+}
+
+.block {
+    width: calc(33.33% - 25px);
+    height: 139px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1), 0px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    margin-top: 15px;
+    margin-left: 25px;
+    padding-left: 10px;
+    margin-bottom: 25px;
+    box-sizing: border-box;
+    text-align: left;
+    position: relative;
+}
+
+.circle_2 {
+    width: 103px;
+    height: 103px;
+    border-radius: 50%;
+    background: #ECECEC;
+    margin-top: 18px;
+    margin-left: 13px;
+    display: flex; /* задаем контейнеру flex-контейнер */
+  justify-content: center; /* горизонтально центрируем содержимое контейнера */
+  align-items: center; 
+}
+
+.circle_2 img {
+    max-width: 100%; /* задаем максимальную ширину изображения 100% ширины контейнера */
+  max-height: 100%; /* задаем максимальную высоту изображения 100% высоты контейнера */
+  object-fit: contain;
+}
+
+.plus_circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #9AD080;
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: white;
+}
+
+.plus_circle {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+
+}
+
+.plus_circle:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+.plus {
+    margin-top: 2px;
+}
+
+.block-text {
+    font-family: 'Reem Kufi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 152.3%;
+
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    letter-spacing: -0.01em;
+}
+
+.price {
+    font-family: 'Reem Kufi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 152.3%;
+    position: absolute;
+    top: 35px;
+    right: 15px;
+    display: flex;
+    align-items: center;
+    text-align: right;
+    letter-spacing: -0.01em;
+}
+
+.page-top {
+    width: 1020px;
+    height: 162px;
+    background: linear-gradient(180deg, #559B49 0%, #BAE899 116.67%);
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total {
+    font-family: 'Reem Kufi';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 152.3%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.01em;
+    padding-left: 20px;
+    color: #FFFFFF;
+}
+
+.basket {
+    width: 320px;
+    height: 75px;
+    background: #F6C914;
+    box-shadow: 0px 10px 30px rgba(202, 66, 17, 0.1);
+    border-radius: 20px;
+    margin-left: auto;
+    align-self: flex-start;
+    margin-top: 42px;
+    margin-right: 80px;
+}
+
+.basket:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+a:link,
+a:visited {
+    color: inherit;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.sandviches_icon {
+    z-index: 2;
+    overflow: hidden;
+}
