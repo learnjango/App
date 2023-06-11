@@ -1,5 +1,10 @@
 from django.shortcuts import render
 from vending_app.models import Products
+from django.http import JsonResponse
+from django.shortcuts import get_object_or_404, redirect
+from .models import Products
+
+
 
 # Create your views here.
 def sandwiches(request):
@@ -36,3 +41,5 @@ def sweets(request):
         'pr': products
     }
     return render(request, 'sweets.html', context) 
+
+

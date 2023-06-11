@@ -20,59 +20,66 @@
         </div>
 
         <div class="global_menu">
-            <a href="{% url 'sandwiches' %}"><div class="{% block sandvich_green %}{% endblock %}">
-                <div class="circle">
-                    <img src="{% static 'icons/Sandwiches.png' %}" alt="Sandwiches" class="circle_icon">
-                </div>
-                <h2>Sandwiches</h2>
+            <a href="{% url 'vending_app:sandwiches' %}">
+                <div class="{% block sandvich_green %}{% endblock %}">
+                    <div class="circle">
+                        <img src="{% static 'icons/Sandwiches.png' %}" alt="Sandwiches" class="circle_icon">
+                    </div>
+                    <h2>Sandwiches</h2>
             </a>
-            </div>
-            <a href="{% url 'salads' %}"><div class="{% block salad_green %}{% endblock %}">
+        </div>
+        <a href="{% url 'vending_app:salads' %}">
+            <div class="{% block salad_green %}{% endblock %}">
                 <div class="circle">
                     <img src="{% static 'icons/Salads.png' %}" alt="Sandwiches" class="circle_icon">
                 </div>
                 <h2>Salads</h2>
-            </a>
+        </a>
+    </div>
+    <a href="{% url 'vending_app:snacks' %}">
+        <div class="{% block snack_green %}{% endblock %}">
+            <div class="circle">
+                <img src="{% static 'icons/Snacks.png' %}" alt="Sandwiches" class="circle_icon">
             </div>
-            <a href="{% url 'snacks' %}"><div class="{% block snack_green %}{% endblock %}">
-                <div class="circle">
-                    <img src="{% static 'icons/Snacks.png' %}" alt="Sandwiches" class="circle_icon">
-                </div>
-                <h2>Snacks</h2>
-            </a>
+            <h2>Snacks</h2>
+    </a>
+    </div>
+    <a href="{% url 'vending_app:drinks' %}">
+        <div class="{% block drink_green %}{% endblock %}">
+            <div class="circle">
+                <img src="{% static 'icons/Drinks.png' %}" alt="Sandwiches" class="circle_icon">
             </div>
-            <a href="{% url 'drinks' %}"><div class="{% block drink_green %}{% endblock %}">
-                <div class="circle">
-                    <img src="{% static 'icons/Drinks.png' %}" alt="Sandwiches" class="circle_icon">
-                </div>
-                <h2>Drinks</h2>
-            </a>
+            <h2>Drinks</h2>
+    </a>
+    </div>
+    <a href="{% url 'vending_app:sweets' %}">
+        <div class="{% block sweet_green %}{% endblock %}">
+            <div class="circle">
+                <img src="{% static 'icons/Sweets.png' %}" alt="Sandwiches" class="circle_icon">
             </div>
-            <a href="{% url 'sweets' %}"><div class="{% block sweet_green %}{% endblock %}">
-                <div class="circle">
-                    <img src="{% static 'icons/Sweets.png' %}" alt="Sandwiches" class="circle_icon">
-                </div>
-                <h2>Sweets</h2>
-            </a>
-            </div>
-        </div>
+            <h2>Sweets</h2>
+    </a>
+    </div>
+    </div>
 
-        <div class="menu_name">{% block catalog_name %}{% endblock %}</div>
+    <div class="menu_name">{% block catalog_name %}{% endblock %}</div>
 
 
-{% block content %}{% endblock %}
+    {% block content %}{% endblock %}
 
 
 
-        <div class="page-top">
-            <div class="total">Total: 2000֏</div>
-                <a href="#"><div class="basket"></a>
+    <div class="page-top">
+        <div class="total" id="total">Total: 0֏</div>
+        <a href="#">
+            <div class="basket">
                 <center><img src="{% static 'icons/basket.png' %}" alt="basket" style="margin-top: 11px;"></center>
             </div>
-        </div>
-
+        </a>
+    </div>
 
     </div>
+
 
 </body>
 
