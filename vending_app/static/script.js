@@ -37,17 +37,8 @@ function updateTotal() {
     total += count * price;
   }
 
-  localStorage.setItem('total', total.toString());
-
   var totalElement = document.getElementById('totalAmount');
   totalElement.textContent = 'Total: ' + total + '֏';
 }
 
-var savedTotal = localStorage.getItem('total');
-
-if (savedTotal !== null) {
-  var total = parseInt(savedTotal);
-
-  var totalElement = document.getElementById('totalAmount');
-  totalElement.textContent = 'Total: ' + total + '֏';
-}
+updateTotal();
