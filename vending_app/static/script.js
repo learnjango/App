@@ -1,7 +1,9 @@
+// Получаем ссылки на кнопки и элементы счетчика
 var plusButtons = document.getElementsByClassName('plus_button');
 var minusButtons = document.getElementsByClassName('minus_button');
 var countElements = document.getElementsByClassName('count_number count');
 
+// Добавляем обработчики событий для кнопок "+"
 for (var i = 0; i < plusButtons.length; i++) {
   plusButtons[i].addEventListener('click', function (event) {
     event.preventDefault();
@@ -10,10 +12,12 @@ for (var i = 0; i < plusButtons.length; i++) {
     if (count < 10) {
       countElement.textContent = count + 1;
       updateTotal();
+      saveTotal();
     }
   });
 }
 
+// Добавляем обработчики событий для кнопок "-"
 for (var i = 0; i < minusButtons.length; i++) {
   minusButtons[i].addEventListener('click', function (event) {
     event.preventDefault();
@@ -22,10 +26,12 @@ for (var i = 0; i < minusButtons.length; i++) {
     if (count > 0) {
       countElement.textContent = count - 1;
       updateTotal();
+      saveTotal();
     }
   });
 }
 
+// Обновляем общую сумму
 function updateTotal() {
   var counts = document.querySelectorAll('.count_number.count');
   var prices = document.querySelectorAll('.price.price_per_item');
@@ -41,4 +47,21 @@ function updateTotal() {
   totalElement.textContent = 'Total: ' + total + '֏';
 }
 
-updateTotal();
+// Сохраняем общую сумму в localStorage
+function saveTotal() {
+  var totalElement = document.getElementById('totalAmount');
+  var totalValue = totalElement.textContent;
+  localStorage.setItem('totalAmount', totalValue);
+}
+
+// Загружаем сохраненную общую сумму из localStorage
+function loadTotal() {
+  var totalValue = localStorage.getItem('totalAmount');
+  if (totalValue) {
+    var totalElement = document.getElementById('totalAmount');
+    totalElement.textContent = totalValue;
+  }
+}
+
+// Загружаем сохраненную общую сумму при загрузке страницы
+loadTotal();
