@@ -8,25 +8,36 @@
 {% block sweet_green %}oval_white{% endblock %}
 
 
-
 {% block content %}
 
 <div class="menu">
     {% for post in pr %}
     {% if post.category == "salad" %}
-    <div class="block">
+    <div class="block product" data-category="{{ post.category }}">
         <div class="circle_2">
-            <img src="{% static post.img_link %}" alt="Sandwiches" class="sandviches_icon">
+          <img src="{% static post.img_link %}" alt="Sandwiches" class="sandviches_icon">
         </div>
         <div class="block-text">{{ post.name }}</div>
-        <div class="price">{{ post.price }}</div>
-        <a href="#">
+        <div class="price price_per_item">{{ post.price }}</div>
+    
+        <div class="minus_plus">
+          <a href="#" class="plus_button">
             <div class="plus_circle">
-                <div class="plus">+</div>
+              <div class="plus">+</div>
             </div>
-        </a>
+          </a>
+    
+          <h2 class="count_number count">0</h2>
+    
+          <a href="#" class="minus_button">
+            <div class="minus_circle">
+              <div class="minus">-</div>
+            </div>
+          </a>
+        </div>
     </div>
     {% endif %}
     {% endfor %}
 </div>
+
 {% endblock %}
